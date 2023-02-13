@@ -7,6 +7,14 @@
   font-family: "Urbanist", sans-serif;
 }
 
+* .pic {
+  width: 30%;
+  height: 60%;
+  margin-top: auto;
+  align-content: center;
+  margin-left: 28%;
+}
+
 body {
   margin: 0;
 }
@@ -289,3 +297,38 @@ button:hover {
   border-bottom: 1px solid maroon;
   padding-bottom: 5px;
 } */
+
+.thor {
+  align-content: center;
+  margin-left: 70%;
+  margin-top: -10%;
+}
+
+.post {
+  align-content: center;
+  margin-left: 71%;
+  margin-top: -11%;
+  font-weight: 600;
+  color: purple;
+  height: 500%;
+}
+
+.most {
+  align-content: center;
+  margin-left: 63%;
+  margin-top: -7%;
+  padding: 8%;
+}
+
+.maka {
+  align-content: center;
+  margin-left: 68%;
+  margin-top: -16%;
+}
+
+.makia {
+  align-content: center;
+  margin-top: -60%;
+  width: 35%;
+  padding: 9%;
+}
