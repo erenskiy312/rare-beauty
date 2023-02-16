@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { AccountCircle } from "@mui/icons-material";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import AddIcon from "@mui/icons-material/Add";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -27,6 +28,10 @@ const Navbar = () => {
         <PermIdentityIcon
           className="auth-icon"
           onClick={() => navigate("/login")}
+        />
+        <AddIcon
+          className="add-product-icon"
+          onClick={() => navigate("/add")}
         />
       </h1>
     </div>

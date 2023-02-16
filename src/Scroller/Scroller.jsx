@@ -6,11 +6,19 @@ const Scroller = () => {
       <div id="root"></div>
       <div class="wrapper">
         <header>
-          <img src="./images/Mountain.png" class="background" />
-          <img src="./images/cosmetics.png" class="foreground" />
+          <img
+            src="./images/Mountain.png"
+            class="background"
+            alt="background"
+          />
+          <img
+            src="./images/cosmetics.png"
+            class="foreground"
+            alt="foreground"
+          />
           <h1 class="title">Rare Beauty</h1>
         </header>
-        <section>
+        <section className="section_text">
           Rare Beauty is breaking down unrealistic standards of perfection. ​
           This is makeup made to feel good in, without hiding what makes you
           unique—because Rare Beauty is not about being someone else, but being
