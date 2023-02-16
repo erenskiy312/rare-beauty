@@ -4,11 +4,11 @@ const Scroller = () => {
   return (
     <div>
       <div id="root"></div>
-      <div class="wrapper">
+      <div className="wrapper">
         <header>
           <img src="./images/Mountain.png" class="background" />
           <img src="./images/cosmetics.png" class="foreground" />
-          <h1 class="title">Rare Beauty</h1>
+          <h1 className="title">Rare Beauty</h1>
         </header>
         <section>
           Rare Beauty is breaking down unrealistic standards of perfection. ​
