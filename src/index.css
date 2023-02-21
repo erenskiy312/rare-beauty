@@ -327,11 +327,30 @@ button:hover {
 }
 
 /* about start */
-
+.aboutus {
+  display: flex;
+  background-color: #fdfbf8;
+}
 .about__img {
-  width: 10px;
-  height: 10px;
-  float: right;
-  margin: 5px;
+  width: 35rem;
+  margin: auto;
+  padding: 0px;
+}
+
+.about__header {
+  color: #7f2649;
+  margin-top: 10rem;
+  margin-left: 3rem;
+}
+
+.about__title {
+  color: #7f2649;
+  font-size: 3rem;
+}
+
+.about__text {
+  color: #7f2649;
+  margin-top: 20px;
+  font-size: 1.25rem;
 }
 /* about end */
