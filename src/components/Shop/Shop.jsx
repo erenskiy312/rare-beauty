@@ -1,9 +1,11 @@
 import React from "react";
+import ProductList from "../product/ProductList";
 
 const Shop = () => {
   return (
     <div>
-      <h1>Brows All Beauty Products</h1>
+      <h1 className="collaction-title">Everything For Beauty</h1>
+      <ProductList />
     </div>
   );
 };
