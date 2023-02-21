@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
+import { useNavigate, useParams } from "react-router-dom";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 const EditProduct = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
+  const [stock, setStock] = useState("");
+
   const {
-    getCategories,
     categories,
-    createProduct,
+    getCategories,
     getOneProduct,
     oneProduct,
     updateProduct,
@@ -23,22 +31,16 @@ const EditProduct = () => {
       setDescription(oneProduct.description);
       setPrice(oneProduct.price);
       setCategory(oneProduct.category.id);
+      setStock(oneProduct.stock);
     }
   }, [oneProduct]);
-
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
-
-  //   console.log(categories);
 
   const { id } = useParams();
   const navigate = useNavigate();
 
-  function handleSave() {
-    console.log(title, description, price, category, image);
+  function handleSave(e) {
+    e.preventDefault();
+    console.log(category, title, description, price, image);
     let newProduct = new FormData();
     newProduct.append("title", title);
     newProduct.append("description", description);
@@ -47,55 +49,91 @@ const EditProduct = () => {
     if (image) {
       newProduct.append("image", image);
     }
-
+    newProduct.append("stock", stock);
     updateProduct(id, newProduct);
     navigate("/products");
   }
-
-  //   console.log(title, description, price, category, image);
-  console.log(oneProduct);
   return (
-    <div className="d-flex flex-column w-50 m-auto">
-      <h1 className="m-auto">Edit product</h1>
+    <div>
+      <form action="submit" onSubmit={handleSave}>
+        <ul className="add-list">
+          <li className="add-item">
+            <h1 className="add-title">Edit Product</h1>
+          </li>
+          <li className="add_item">
+            <p>CATEGORY BEFORE: {oneProduct?.category.name}</p>
+          </li>
+          <li className="add-item">
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="select-category"
+            >
+              <option value="">-----</option>
 
-      <p>CATEGORY BEFORE: {oneProduct?.category.title} </p>
-
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="">choose category</option>
-
-        {categories.map((item) => (
-          <option key={item.id} value={item.id}>
-            {item.title}
-          </option>
-        ))}
-      </select>
-      <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="title"
-      />
-      <input
-        type="text"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        placeholder="description"
-      />
-      <input
-        type="text"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-        placeholder="price"
-      />
-
-      <p>Image before</p>
-      <img width={100} src={oneProduct?.image} alt="" />
-      <input
-        accept="image/*"
-        type="file"
-        onChange={(e) => setImage(e.target.files[0])}
-      />
-      <button onClick={handleSave}>SAVE PRODUCT</button>
+              {categories.map((item) => (
+                <option value={item.slug} key={item.id}>
+                  {item.name}
+                </option>
+              ))}
+            </select>
+          </li>
+          <li className="add-item">
+            <input
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="add-inputs"
+              type="text"
+              placeholder="Title"
+            />
+          </li>
+          <li className="add-item">
+            <input
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              className="add-inputs"
+              type="text"
+              placeholder="Description"
+            />
+          </li>
+          <li className="add-item">
+            <input
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className="add-inputs"
+              type="text"
+              placeholder="Price"
+            />
+          </li>
+          <li className="add-item">
+            <p>Image Before:</p>
+            <img width={100} src={oneProduct?.image} alt="" />
+          </li>
+          <li className="add-item">
+            <input
+              onChange={(e) => setImage(e.target.files[0])}
+              className="image-inputs"
+              accept="image/*"
+              type="file"
+            />
+          </li>
+          <li className="add-item">
+            <p>Stock Before {oneProduct?.stock}</p>
+          </li>
+          <li className="add-item">
+            <select
+              value={stock}
+              className="select-category"
+              onChange={(e) => setStock(e.target.value)}
+            >
+              <option value="-----">-----</option>
+              <option value="in_stock">in_stock</option>
+              <option value="out_of_stock">out_of_stock</option>
+            </select>
+          </li>
+          <button className="btn-add">Save Product</button>
+        </ul>
+      </form>
     </div>
   );
 };

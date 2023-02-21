@@ -1,6 +1,112 @@
-@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Playfair+Display&family=Urbanist:wght@100&display=swap");
+
 * {
+<<<<<<< HEAD
   /* background-color: #fdfbf8; */
+=======
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Urbanist", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.title {
+  font-size: 7rem;
+  color: rgb(207, 160, 160);
+  text-shadow: 0 0 5px black;
+}
+
+section {
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: rgb(7, 6, 6);
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+}
+
+.footer_h1 {
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer__logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+
+.footer__list {
+  color: white;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  color: aliceblue;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.footer__info {
+  color: aliceblue;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"); */
+* {
+  /* background-color: #fdfbf8;
+>>>>>>> 19dd3706617e1691b9396ea0953b812d347b856a
   font-family: "Aldrich", sans-serif;
   font-family: "Fuzzy Bubbles", cursive;
   font-family: "Inter", sans-serif;
@@ -10,5 +116,226 @@
 
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
+
+h1 {
+  display: inline;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline;
+}
+
+a {
+  padding: 1%;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  color: #7f2549;
+  cursor: pointer;
+}
+
+.navbar {
+  min-height: 10vh;
+}
+
+.logo {
+  margin-left: 30%;
+}
+
+::placeholder {
+  color: #7f2549;
+  font-size: 15px;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid maroon;
+}
+
+.search {
+  margin-left: 21%;
+  line-height: 25px;
+  color: #7f2549;
+}
+
+.auth-icon {
+  margin-left: 3%;
+  cursor: pointer;
+  color: maroon;
+}
+
+.register-inputs,
+.login-inputs {
+  /* display: block;
+  margin: auto; */
+  border: none;
+  border-bottom: 1px solid #7f2549;
+  border-radius: 0;
+  color: #7f2549;
+  font-family: Ogg Regular;
+  padding: 0.4375rem 1.125rem;
+  text-align: left;
+  width: 35%;
+  font-size: 133%;
+  margin-left: -7%;
+}
+
+.register-form {
+  margin: 80px 180px 0px;
+}
+
+.register-title,
+.login-title,
+.create-account-title {
+  color: #000914;
+  /* font-family: Ogg Regular; */
+  margin-left: -4% !important;
+  font-weight: 400;
+  font-size: 48px;
+  margin: 10px 0px 30px;
+  line-height: 1.15;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 42%;
+}
+/* 
+.btn-register .btn-login {
+  color: #fdfbf8;
+  background-color: #7f2549;
+  padding: 7px 34px 9px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 38%;
+  margin-top: 1%;
+  width: 20%;
+  cursor: pointer;
+  border: 1px solid #7f2549;
+  transition: 0.5s;
+} */
+
+button {
+  color: #fdfbf8;
+  background-color: #7f2549;
+  padding: 7px 34px 9px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 38%;
+  margin-top: 1%;
+  width: 20%;
+  cursor: pointer;
+  border: 1px solid #7f2549;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #fdfbf8;
+  color: #7f2549;
+  transition: 0.5s;
+}
+
+/* .btn-register,
+.btn-login:hover {
+  background-color: #fdfbf8;
+  color: #7f2549;
+  transition: 0.5s;
+} */
+
+.have-account,
+.forgot-password {
+  font-size: 14px;
+  color: #464545;
+  display: block;
+  margin-left: 37%;
+}
+
+.register-list {
+  margin-top: 4%;
+}
+
+.login-list {
+  margin-right: 48px;
+  width: 71%;
+  margin-top: 4%;
+}
+
+.forgot-password {
+  margin-left: 26%;
+}
+
+.line {
+  border-right: 1px solid black;
+  height: 400px;
+  position: absolute;
+  left: 49%;
+  margin-left: -19px;
+  top: 17%;
+}
+
+.create-account-title {
+  position: absolute;
+  left: 58%;
+  margin-top: -230px;
+}
+
+.btn-click-register {
+  margin-left: 52%;
+  position: absolute;
+  margin-top: -9%;
+}
+
+/* .active {
+  border-bottom: 1px solid maroon;
+  padding-bottom: 5px;
+} */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+
+* {
+  font-family: "Aldrich", sans-serif;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif; */
+
+.section {
+  background-color: #fdfbf8;
+  display: flex;
+}
+
+.images__item {
+  width: 38rem;
+  border-radius: 20rem;
+  margin: 2rem;
+}
+
+.section__header {
+  margin-top: 17rem;
+  margin-left: 3rem;
+}
+
+.section__title {
+  font-size: 3rem;
+  color: #000914;
+}
+
+.section__text {
+  font-size: 1.25rem;
+  color: #000914;
+}
+
+/* about start */
+
+.about__img {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin: 5px;
+}
+/* about end */
