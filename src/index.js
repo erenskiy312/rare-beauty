@@ -1,30 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+import AuthContextProvider from "./contexts/AuthContextProvider";
+import ProductContextProvider from "./contexts/ProductContextProvider";
+import "./components/Navbar/navbar.css";
+import "./index.css";
+import "./components/product/products.css";
+import "./components/Auth/auth.css";
 import Artikul1 from "./components/Artikul1/Artikul1";
-
-import Scroller from "./Scroller/Scroller";
-import Footer from "./Footer/Footer";
-import "./Scroller/Scroller.css";
-import "./components/Auth/Auth.css";
-import "./components/Artikul1/Artikul.css";
-import "./Footer/Footer.css";
-import AuthContextProvider from "./context/AuthContextProvider";
-import "./components/product/AddProduct.css";
-import ProductContextProvider from "./context/ProductContextProvider";
+import "./components/Artikul1/artikul.css";
+import Scroller from "./components/Scroller/Scroller";
+import "./components/Scroller/scroller.css";
+import Footer from "./components/Footer/Footer";
+import "./components/Footer/footer.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <AuthContextProvider>
-      <ProductContextProvider>
+    <ProductContextProvider>
+      <AuthContextProvider>
         <App />
-        <Scroller />
-        <Artikul1 />
+        {/* <Artikul1 /> */}
+        {/* <Scroller /> */}
         <Footer />
-      </ProductContextProvider>
-    </AuthContextProvider>
+      </AuthContextProvider>
+    </ProductContextProvider>
   </BrowserRouter>
 );

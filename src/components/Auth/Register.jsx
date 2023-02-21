@@ -1,36 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContextProvider";
-import Loader from "../../Loader/Loader";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import Loader from "../Loader/Loader";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [first_name, setFirstName] = useState("");
-  const [last_name, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const { handleRegister, error, loading, setError } = useAuth();
+  const { handleRegister, loading, error } = useAuth();
 
   function handleSave(e) {
     e.preventDefault();
     if (!email.trim() || !password.trim() || !passwordConfirm.trim()) {
-      alert("заполните все поля");
+      alert("Заполните все поля!");
     } else {
       let formData = new FormData();
-      formData.append("first_name", first_name);
-      formData.append("last_name", last_name);
+      formData.append("first_name", firstName);
+      formData.append("last_name", lastName);
       formData.append("email", email);
       formData.append("password", password);
       formData.append("password2", passwordConfirm);
-      handleRegister(formData);
+      handleRegister(formData, email);
     }
   }
-
-  useEffect(() => {
-    setError(false);
-  }, []);
 
   if (loading) {
     return <Loader />;
@@ -50,7 +46,7 @@ const Register = () => {
               onChange={(e) => setFirstName(e.target.value)}
               className="register-inputs"
               type="text"
-              placeholder="FirstName"
+              placeholder="First Name"
             />
           </li>
           <li className="register-item">
@@ -58,7 +54,7 @@ const Register = () => {
               onChange={(e) => setLastName(e.target.value)}
               className="register-inputs"
               type="text"
-              placeholder="LastName"
+              placeholder="Last Name"
             />
           </li>
           <li className="register-item">

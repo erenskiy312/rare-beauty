@@ -3,11 +3,14 @@ import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API = "http://34.121.141.26/api/v1";
+
 export const authContext = createContext();
 export const useAuth = () => useContext(authContext);
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [mail, setMail] = useState(null);
+  // const [name, setName] = useState(null);
+  // const [surname, setSurname] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -19,8 +22,8 @@ const AuthContextProvider = ({ children }) => {
     try {
       const res = await axios.post(`${API}/accounts/register/`, formData);
       console.log(res);
-
-      // navigate("/register-success");
+      setMail(email);
+      // navigate(`/register-success`);
     } catch (error) {
       setError(Object.values(error.response.data).flat(2));
     } finally {
@@ -33,10 +36,13 @@ const AuthContextProvider = ({ children }) => {
     try {
       const res = await axios.post(`${API}/accounts/login/`, formData);
       localStorage.setItem("tokens", JSON.stringify(res.data));
+      console.log(res);
+
       localStorage.setItem("email", email);
-      setUser(email);
+      setMail(email);
       navigate("/");
     } catch (error) {
+      console.log(error);
       setError(error.response.data.detail);
     } finally {
       setLoading(false);
@@ -67,8 +73,9 @@ const AuthContextProvider = ({ children }) => {
           refresh: tokens.refresh,
         })
       );
+
       const email = localStorage.getItem("email");
-      setUser(email);
+      setMail(email);
     } catch (error) {
       console.log(error);
       handleLogout();
@@ -80,7 +87,8 @@ const AuthContextProvider = ({ children }) => {
   const handleLogout = () => {
     localStorage.removeItem("tokens");
     localStorage.removeItem("email");
-    setUser(false);
+
+    setMail(false);
     navigate("/login");
   };
 
@@ -88,12 +96,16 @@ const AuthContextProvider = ({ children }) => {
     handleRegister,
     handleLogin,
     error,
-    user,
-    checkAuth,
+    // user,
     setError,
     loading,
     handleLogout,
+    checkAuth,
+    // name,
+    // surname,
+    mail,
   };
+
   return <authContext.Provider value={values}>{children}</authContext.Provider>;
 };
 
