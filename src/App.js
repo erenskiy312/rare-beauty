@@ -1,11 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "./components/AboutUs";
 import Artikul1 from "./components/Artikul1/Artikul1";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Shop from "./components/Shop";
+import Home from "./components/pages/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Shop from "./components/Shop/Shop";
+import AboutUs from "./components/pages/AboutUs";
+import AddProduct from "./components/product/AddProduct";
+import EditProduct from "./components/product/EditProduct";
+import ProductList from "./components/product/ProductList";
 
 function App() {
   return (
@@ -18,7 +21,12 @@ function App() {
 
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="*" element={<h1>NOT FOUND PAGE</h1>} />
+
+        <Route path="/add" element={<AddProduct />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/edit/:id" element={<EditProduct />} />
+
+        {/* <Route path="*" element={<h1>NOT FOUND PAGE</h1>} /> */}
       </Routes>
     </>
   );
