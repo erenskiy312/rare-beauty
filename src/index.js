@@ -5,13 +5,13 @@ import App from "./App";
 import Scroller from "./Scroller/Scroller";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./Footer/Footer";
+import Artikul1 from "./components/Artikul1/Artikul1";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <App />
-
-    <Scroller />
+    {/* <Artikul1 /> */}
     <Footer />
   </BrowserRouter>
 );

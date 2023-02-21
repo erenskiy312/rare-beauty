@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavDropdown } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { AccountCircle } from "@mui/icons-material";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import Shop from "./Shop";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [menu, setMenu] = useState(false);
 
   return (
     <div className="navbar">
       <p>
-        <a onClick={() => navigate("/shop")}>SHOP</a>
+        <a
+          onClick={() => {
+            navigate("/shop");
+            setMenu(!menu);
+          }}
+        >
+          SHOP
+        </a>
+        {menu ? <Shop /> : null}
       </p>
       <p>
         <a onClick={() => navigate("/about-us")}>ABOUT US</a>
