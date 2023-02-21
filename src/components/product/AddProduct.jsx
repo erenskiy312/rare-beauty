@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
@@ -6,15 +7,25 @@ const AddProduct = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
+  const [stock, setStock] = useState("");
 
-  function handleSave() {
-    console.log(title, description, price, category, image);
-    const newProduct = new FormData();
+  const { categories, getCategories, createProduct } = useProducts();
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  function handleSave(e) {
+    e.preventDefault();
+    console.log(category, title, description, price, image);
+    let newProduct = new FormData();
     newProduct.append("title", title);
     newProduct.append("description", description);
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
+    newProduct.append("stock", stock);
+    createProduct(newProduct);
   }
   return (
     <div>
@@ -29,7 +40,13 @@ const AddProduct = () => {
               onChange={(e) => setCategory(e.target.value)}
               className="select-category"
             >
-              <option value="">Choose category</option>
+              <option value="">-----</option>
+
+              {categories.map((item) => (
+                <option value={item.slug} key={item.slug}>
+                  {item.name}
+                </option>
+              ))}
             </select>
           </li>
           <li className="add-item">
@@ -66,6 +83,17 @@ const AddProduct = () => {
               accept="image/*"
               type="file"
             />
+          </li>
+          <li className="add-item">
+            <select
+              value={stock}
+              className="select-category"
+              onChange={(e) => setStock(e.target.value)}
+            >
+              <option value="-----">-----</option>
+              <option value="in_stock">in_stock</option>
+              <option value="out_of_stock">out_of_stock</option>
+            </select>
           </li>
           <button className="btn-add">Add Product</button>
         </ul>
