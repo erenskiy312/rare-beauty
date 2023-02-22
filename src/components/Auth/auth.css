@@ -6,12 +6,11 @@
   font-family: "Inter", sans-serif;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Open Sans", sans-serif;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif; */
 
-  margin: 0;
+/* margin: 0;
   padding: 0;
-  box-sizing: border-box;
-} */
+  box-sizing: border-box; */
 
 h1 {
   display: inline;
@@ -71,7 +70,7 @@ input {
 .register-inputs,
 .login-inputs {
   /* display: block;
-  margin: auto; */
+    margin: auto; */
   border: none;
   border-bottom: 1px solid #7f2549;
   border-radius: 0;
@@ -105,19 +104,19 @@ li {
   margin-left: 42%;
 }
 /* 
-.btn-register .btn-login {
-  color: #fdfbf8;
-  background-color: #7f2549;
-  padding: 7px 34px 9px;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-left: 38%;
-  margin-top: 1%;
-  width: 20%;
-  cursor: pointer;
-  border: 1px solid #7f2549;
-  transition: 0.5s;
-} */
+  .btn-register .btn-login {
+    color: #fdfbf8;
+    background-color: #7f2549;
+    padding: 7px 34px 9px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 38%;
+    margin-top: 1%;
+    width: 20%;
+    cursor: pointer;
+    border: 1px solid #7f2549;
+    transition: 0.5s;
+  } */
 
 button {
   color: #fdfbf8;
@@ -140,11 +139,11 @@ button:hover {
 }
 
 /* .btn-register,
-.btn-login:hover {
-  background-color: #fdfbf8;
-  color: #7f2549;
-  transition: 0.5s;
-} */
+  .btn-login:hover {
+    background-color: #fdfbf8;
+    color: #7f2549;
+    transition: 0.5s;
+  } */
 
 .have-account,
 .forgot-password {

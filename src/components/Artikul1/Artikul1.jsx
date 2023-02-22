@@ -2,7 +2,7 @@ import React from "react";
 
 const Artikul1 = () => {
   return (
-    <section className="section">
+    <section className="sections">
       <div className="images">
         <div className="images__item">
           <img

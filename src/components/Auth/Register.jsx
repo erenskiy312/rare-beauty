@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContextProvider";
+import { useAuth } from "../../context/AuthContextProvider";
+
 import Loader from "../Loader/Loader";
 
 const Register = () => {
@@ -10,9 +11,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
-
-  const { handleRegister, loading } = useAuth();
-
+  const { handleRegister, loading, error } = useAuth();
   function handleSave(e) {
     e.preventDefault();
     if (!email.trim() || !password.trim() || !passwordConfirm.trim()) {
@@ -27,17 +26,16 @@ const Register = () => {
       handleRegister(formData, email);
     }
   }
-
   if (loading) {
     return <Loader />;
   }
-
   return (
     <div>
       <form action="submit" onSubmit={handleSave}>
         <ul className="register-list">
           <li className="register-item">
             <h1 className="register-title">Create Account</h1>
+            {error ? <h2>{error}</h2> : null}
           </li>
           <li className="register-item">
             <input

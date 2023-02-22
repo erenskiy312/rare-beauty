@@ -2,9 +2,14 @@ import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import * as React from "react";
 import { useEffect } from "react";
-import { Pagination } from "react-bootstrap";
-import { useProducts } from "../../contexts/ProductContextProvider";
+import { useProducts } from "../../context/ProductContextProvider";
 import ProductCard from "./ProductCard";
+
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import Stack from "@mui/material/Stack";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const ProductList = () => {
   const { products, getProducts, pages } = useProducts();
@@ -38,7 +43,8 @@ const ProductList = () => {
             mb: "4rem",
           }}
         ></Box>
-        <Pagination variant="outlined" shape="rounded" />
+        {/* <Pagination variant="outlined" shape="rounded" /> */}
+        {/* <CustomIcons />s */}
       </Grid>
     </div>
   );
