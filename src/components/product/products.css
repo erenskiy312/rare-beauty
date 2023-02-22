@@ -44,3 +44,53 @@
   margin-left: -7%;
   padding: 1%;
 }
+
+.pagination {
+  color: black;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 427px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+}
+
+.card button {
+  outline: 0;
+  padding: 12px;
+  color: #7f2549;
+  background-color: #fdfbf8;
+  border: 1px solid #7f2549;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 1px;
+  margin-left: 0%;
+}
+
+.card button:hover {
+  background-color: #7f2549;
+  color: #fdfbf8;
+  transition: 0.5s;
+}
+
+.image-card {
+  width: 100%;
+}
+
+.title-card {
+  display: block;
+  font-family: Ogg Regular;
+  font-weight: 500;
+}
+
+.collaction-title {
+  font-family: Ogg Regular;
+  font-weight: 500;
+  color: #7f2549;
+  margin-left: 10%;
+}

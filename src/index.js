@@ -10,16 +10,19 @@ import "./components/Auth/auth.css";
 import "./components/Artikul1/artikul.css";
 import "./components/Footer/footer.css";
 import "./components/Scroller/scroller.css";
+import CartContextProvider from "./contexts/CartContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <ProductContextProvider>
-      <AuthContextProvider>
-        <App />
-        {/* <Artikul1 /> */}
-        {/* <Footer /> */}
-      </AuthContextProvider>
-    </ProductContextProvider>
+    <CartContextProvider>
+      <ProductContextProvider>
+        <AuthContextProvider>
+          <App />
+          {/* <Artikul1 /> */}
+          {/* <Footer /> */}
+        </AuthContextProvider>
+      </ProductContextProvider>
+    </CartContextProvider>
   </BrowserRouter>
 );

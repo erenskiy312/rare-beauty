@@ -114,6 +114,7 @@ const ProductContextProvider = ({ children }) => {
       };
 
       await axios.delete(`${API}/products/${id}/`, config);
+      getProducts();
     } catch (error) {
       console.log(error);
     }
@@ -156,6 +157,8 @@ const ProductContextProvider = ({ children }) => {
         editedProduct,
         config
       );
+      getProducts();
+      console.log(res);
     } catch (error) {
       console.log(error);
     }

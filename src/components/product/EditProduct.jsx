@@ -28,7 +28,8 @@ const EditProduct = () => {
       setTitle(oneProduct.title);
       setDescription(oneProduct.description);
       setPrice(oneProduct.price);
-      setCategory(oneProduct.category.id);
+      setCategory(oneProduct.category);
+      console.log(oneProduct);
       setStock(oneProduct.stock);
     }
   }, [oneProduct]);
@@ -58,9 +59,7 @@ const EditProduct = () => {
           <li className="add-item">
             <h1 className="add-title">Edit Product</h1>
           </li>
-          <li className="add_item">
-            <p>CATEGORY BEFORE: {oneProduct?.category.name}</p>
-          </li>
+          <li className="add_item"></li>
           <li className="add-item">
             <select
               value={category}
@@ -115,9 +114,7 @@ const EditProduct = () => {
               type="file"
             />
           </li>
-          <li className="add-item">
-            <p>Stock Before {oneProduct?.stock}</p>
-          </li>
+
           <li className="add-item">
             <select
               value={stock}
