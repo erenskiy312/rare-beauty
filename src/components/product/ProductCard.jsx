@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useProducts } from "../../contexts/ProductContextProvider";
+import { useProducts } from "../../context/ProductContextProvider";
 
 const ProductCard = ({ item }) => {
   const { deleteProduct } = useProducts();

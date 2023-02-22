@@ -1,6 +1,8 @@
 import axios from "axios";
-import React, { createContext, useContext, useEffect, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
+
+const API = "http://34.121.141.26/api/v1";
 
 export const productContext = createContext();
 export const useProducts = () => useContext(productContext);
@@ -30,8 +32,6 @@ function reducer(state = INIT_STATE, action) {
       return state;
   }
 }
-
-const API = "http://34.121.141.26/api/v1";
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -71,7 +71,7 @@ const ProductContextProvider = ({ children }) => {
         },
       };
 
-      const res = await axios.get(`${API}/category/list/`, config);
+      const res = await axios.get(`${API}/categories/`, config);
       dispatch({
         type: "GET_CATEGORIES",
         payload: res.data.results,
@@ -111,6 +111,7 @@ const ProductContextProvider = ({ children }) => {
       };
 
       await axios.delete(`${API}/products/${id}/`, config);
+      getProducts();
     } catch (error) {
       console.log(error);
     }
@@ -154,6 +155,7 @@ const ProductContextProvider = ({ children }) => {
         editedProduct,
         config
       );
+      getProducts();
     } catch (error) {
       console.log(error);
     }

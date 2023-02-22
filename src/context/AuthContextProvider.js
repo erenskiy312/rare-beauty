@@ -7,7 +7,7 @@ export const authContext = createContext();
 export const useAuth = () => useContext(authContext);
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [mail, setMail] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -34,7 +34,7 @@ const AuthContextProvider = ({ children }) => {
       const res = await axios.post(`${API}/accounts/login/`, formData);
       localStorage.setItem("tokens", JSON.stringify(res.data));
       localStorage.setItem("email", email);
-      setUser(email);
+      setMail(email);
       navigate("/");
     } catch (error) {
       setError(error.response.data.detail);
@@ -68,7 +68,7 @@ const AuthContextProvider = ({ children }) => {
         })
       );
       const email = localStorage.getItem("email");
-      setUser(email);
+      setMail(email);
     } catch (error) {
       console.log(error);
       handleLogout();
@@ -80,7 +80,7 @@ const AuthContextProvider = ({ children }) => {
   const handleLogout = () => {
     localStorage.removeItem("tokens");
     localStorage.removeItem("email");
-    setUser(false);
+    setMail(false);
     navigate("/login");
   };
 
@@ -88,7 +88,7 @@ const AuthContextProvider = ({ children }) => {
     handleRegister,
     handleLogin,
     error,
-    user,
+    mail,
     checkAuth,
     setError,
     loading,
