@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useProducts } from "../../context/ProductContextProvider";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 const EditProduct = () => {
   const [title, setTitle] = useState("");
@@ -29,6 +29,8 @@ const EditProduct = () => {
       setDescription(oneProduct.description);
       setPrice(oneProduct.price);
       setCategory(oneProduct.category);
+      setCategory(oneProduct.category);
+      console.log(oneProduct);
       setStock(oneProduct.stock);
     }
   }, [oneProduct]);
@@ -58,6 +60,7 @@ const EditProduct = () => {
           <li className="add-item">
             <h1 className="add-title">Edit Product</h1>
           </li>
+          <li className="add_item"></li>
           <li className="add_item"></li>
           <li className="add-item">
             <select

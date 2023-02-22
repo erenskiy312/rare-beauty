@@ -8,6 +8,8 @@ import AboutUs from "./components/pages/AboutUs";
 import AddProduct from "./components/product/AddProduct";
 import EditProduct from "./components/product/EditProduct";
 import ProductList from "./components/product/ProductList";
+import Cart from "./components/Cart/Cart";
+import Artikul1 from "./components/Artikul1/Artikul1";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/add" element={<AddProduct />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/edit/:id" element={<EditProduct />} />
+
+        <Route path="/cart" element={<Cart />} />
 
         {/* <Route path="*" element={<h1>NOT FOUND PAGE</h1>} /> */}
       </Routes>

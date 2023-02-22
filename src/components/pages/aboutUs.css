@@ -13,12 +13,34 @@
   box-sizing: border-box;
 }
 
-.cart-icon {
-  cursor: pointer;
-  margin-left: 13px;
-  margin-top: -5px;
+.aboutus {
+  background-color: #fdfbf8;
+  margin-left: 9%;
+  display: flex;
 }
 
-.delete-cart {
-  width: 47%;
+.flex {
+  width: 53%;
+}
+.about__img {
+  width: 35rem;
+  margin: auto;
+  padding: 0px;
+}
+
+.about__header {
+  color: black;
+  margin-top: 10rem;
+  margin-left: 3rem;
+}
+
+.about__title {
+  color: black;
+  font-size: 3rem;
+}
+
+.about__text {
+  color: black;
+  margin-top: 20px;
+  font-size: 1.25rem;
 }

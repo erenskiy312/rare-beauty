@@ -4,9 +4,9 @@ import PaginationItem from "@mui/material/PaginationItem";
 import Stack from "@mui/material/Stack";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useProducts } from "../../context/ProductContextProvider";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 export default function CustomIcons() {
   const { pages } = useProducts();

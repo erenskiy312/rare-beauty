@@ -16,7 +16,7 @@ const Artikul1 = () => {
         <div className="section__header">
           <h2 className="section__title">What makes us Rare</h2>
           <div className="section__text">
-            <p>
+            <p className="section__descr">
               Together we’re building a safe, welcoming space in beauty and
               beyond. This is makeup made to feel good in, without hiding what
               makes you unique. And it’s all vegan and cruelty free.

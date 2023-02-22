@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useProducts } from "../../context/ProductContextProvider";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");

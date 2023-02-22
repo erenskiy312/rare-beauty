@@ -6,25 +6,29 @@ import "./components/Navbar/navbar.css";
 import "./index.css";
 import "./components/product/products.css";
 import "./components/Auth/auth.css";
-import Artikul1 from "./components/Artikul1/Artikul1";
+
 import "./components/Artikul1/artikul.css";
-import Scroller from "./components/Scroller/Scroller";
+
 import "./components/Scroller/scroller.css";
-import Footer from "./components/Footer/Footer";
 import "./components/Footer/footer.css";
-import ProductContextProvider from "./context/ProductContextProvider";
-import AuthContextProvider from "./context/AuthContextProvider";
+import "./components/pages/aboutUs.css";
+import CartContextProvider from "./contexts/CartContextProvider";
+import AuthContextProvider from "./contexts/AuthContextProvider";
+import ProductContextProvider from "./contexts/ProductContextProvider";
+import Artikul1 from "./components/Artikul1/Artikul1";
+import Footer from "./components/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <ProductContextProvider>
-      <AuthContextProvider>
-        <App />
-        {/* <Artikul1 /> */}
-        {/* <Scroller /> */}
-        <Footer />
-      </AuthContextProvider>
-    </ProductContextProvider>
+    <CartContextProvider>
+      <ProductContextProvider>
+        <AuthContextProvider>
+          <App />
+          {/* <Artikul1 /> */}
+          {/* <Footer /> */}
+        </AuthContextProvider>
+      </ProductContextProvider>
+    </CartContextProvider>
   </BrowserRouter>
 );

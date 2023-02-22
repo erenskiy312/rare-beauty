@@ -13,6 +13,14 @@
   padding: 0;
   box-sizing: border-box;
 } */
+
+.container {
+  width: 48%;
+  display: flex;
+  margin-left: 40%;
+  margin-top: -43%;
+}
+
 .section {
   background-color: #fdfbf8;
   display: flex;
@@ -35,4 +43,5 @@
 
 .section__text {
   font-size: 1.25rem;
+  color: black;
 }
