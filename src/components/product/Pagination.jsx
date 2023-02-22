@@ -1,11 +1,36 @@
 import * as React from "react";
 import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
 import Stack from "@mui/material/Stack";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
-export default function PaginationRounded() {
+export default function CustomIcons() {
+  const { pages } = useProducts();
+
+  function getPagesCount() {
+    let pageCountArr = [];
+
+    for (let i = 1; i <= pages; i++) {
+      pageCountArr.push(i);
+    }
+    return pageCountArr;
+  }
   return (
-    <Stack spacing={2}>
-      <Pagination className="pagination" count={10} shape="rounded" />
-    </Stack>
+    <Pagination
+      count={10}
+      page={1}
+      variant="outlined"
+      shape="rounded"
+      // renderItem={(item) => (
+      //   <PaginationItem
+      //     slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+      //     {...item}
+      //   />
+      // )}
+    />
   );
 }

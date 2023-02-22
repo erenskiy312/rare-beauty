@@ -31,6 +31,12 @@ const ProductCard = ({ item }) => {
           <button onClick={() => addProductToCart(item)}>
             ADD TO BAG · {item.price}
           </button>
+          {item.owner ? (
+            <>
+              <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
+              <button onClick={() => deleteProduct(item.id)}>Delete</button>
+            </>
+          ) : null}
         </p>
       </div>
     </div>

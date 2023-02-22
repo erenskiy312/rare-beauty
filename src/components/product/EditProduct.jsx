@@ -29,6 +29,7 @@ const EditProduct = () => {
       setDescription(oneProduct.description);
       setPrice(oneProduct.price);
       setCategory(oneProduct.category);
+      setCategory(oneProduct.category);
       console.log(oneProduct);
       setStock(oneProduct.stock);
     }
@@ -59,6 +60,7 @@ const EditProduct = () => {
           <li className="add-item">
             <h1 className="add-title">Edit Product</h1>
           </li>
+          <li className="add_item"></li>
           <li className="add_item"></li>
           <li className="add-item">
             <select

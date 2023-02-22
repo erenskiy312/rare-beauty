@@ -5,12 +5,12 @@ const Scroller = () => {
     <div>
       <div id="root"></div>
       <div className="wrapper">
-        <header>
+        <header className="header_rare">
           <img src="./images/Mountain.png" class="background" />
           <img src="./images/cosmetics.png" class="foreground" />
-          <h1 className="title">Rare Beauty</h1>
+          <h1 className="title_rare">Rare Beauty</h1>
         </header>
-        <section>
+        <section className="section_rare">
           Rare Beauty is breaking down unrealistic standards of perfection. ​
           This is makeup made to feel good in, without hiding what makes you
           unique—because Rare Beauty is not about being someone else, but being
@@ -20,7 +20,7 @@ const Scroller = () => {
           in the world. ​ Our vision is to create a safe, welcoming space in
           beauty—and beyond—that supports mental well-being across age, gender
           identity, sexual orientation, race, cultural background, physical or
-          mental ability, and perspective. ​ We believe in the beauty of
+          mental ability, and perspective.​ We believe in the beauty of
           imperfections. We nurture a caring, respectful community. ​ We create
           meaningful connections and relationships. ​ We champion authenticity
           and positivity. ​We lead with transparency to build trust. ​We believe
