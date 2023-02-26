@@ -29,7 +29,6 @@ const EditProduct = () => {
       setDescription(oneProduct.description);
       setPrice(oneProduct.price);
       setCategory(oneProduct.category);
-      setCategory(oneProduct.category);
       console.log(oneProduct);
       setStock(oneProduct.stock);
     }
