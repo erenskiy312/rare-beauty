@@ -21,6 +21,7 @@ const AuthContextProvider = ({ children }) => {
       console.log(res);
 
       // navigate("/register-success");
+      setMail(email);
     } catch (error) {
       setError(Object.values(error.response.data).flat(2));
     } finally {
