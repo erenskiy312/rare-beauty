@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/erenskiy312/fullstack_hackaton.git/static/css/main.0e1785dd.css",
-    "main.js": "/erenskiy312/fullstack_hackaton.git/static/js/main.b76922fc.js",
-    "index.html": "/erenskiy312/fullstack_hackaton.git/index.html",
-    "main.0e1785dd.css.map": "/erenskiy312/fullstack_hackaton.git/static/css/main.0e1785dd.css.map",
-    "main.b76922fc.js.map": "/erenskiy312/fullstack_hackaton.git/static/js/main.b76922fc.js.map"
+    "main.css": "/erenskiy312/rare-beauty/static/css/main.0e1785dd.css",
+    "main.js": "/erenskiy312/rare-beauty/static/js/main.1b5947b7.js",
+    "index.html": "/erenskiy312/rare-beauty/index.html",
+    "main.0e1785dd.css.map": "/erenskiy312/rare-beauty/static/css/main.0e1785dd.css.map",
+    "main.1b5947b7.js.map": "/erenskiy312/rare-beauty/static/js/main.1b5947b7.js.map"
   },
   "entrypoints": [
     "static/css/main.0e1785dd.css",
-    "static/js/main.b76922fc.js"
+    "static/js/main.1b5947b7.js"
   ]
 }
