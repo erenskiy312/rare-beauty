@@ -12,7 +12,9 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const { handleRegister, loading, error } = useAuth();
+  
   function handleSave(e) {
+
     e.preventDefault();
     if (!email.trim() || !password.trim() || !passwordConfirm.trim()) {
       alert("Заполните все поля!");
@@ -22,7 +24,7 @@ const Register = () => {
       formData.append("last_name", lastName);
       formData.append("email", email);
       formData.append("password", password);
-      formData.append("password2", passwordConfirm);
+      formData.append("password_confirm", passwordConfirm);
       handleRegister(formData, email);
     }
   }
@@ -84,8 +86,9 @@ const Register = () => {
       </form>
       <a onClick={() => navigate("/login")} className="have-account">
         Already have an account? Login here.
-      </a>
+      </a>             
     </div>
+    
   );
 };
 

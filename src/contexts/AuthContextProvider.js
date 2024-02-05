@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://34.121.141.26/api/v1";
+const API = "http://34.173.115.25/api/v1";
+
 export const authContext = createContext();
 export const useAuth = () => useContext(authContext);
 
@@ -12,12 +13,14 @@ const AuthContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-
+  
   const handleRegister = async (formData, email) => {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${API}/accounts/register/`, formData);
+      const res = await axios.post(`${API}/account/register/`, formData);
+      localStorage.setItem('email', email);
+      setMail(email)
       console.log(res);
 
       // navigate("/register-success");
@@ -31,7 +34,7 @@ const AuthContextProvider = ({ children }) => {
   const handleLogin = async (formData, email) => {
     setLoading(true);
     try {
-      const res = await axios.post(`${API}/accounts/login/`, formData);
+      const res = await axios.post(`${API}/account/login/`, formData);
       localStorage.setItem("tokens", JSON.stringify(res.data));
       localStorage.setItem("email", email);
       setMail(email);
@@ -56,7 +59,7 @@ const AuthContextProvider = ({ children }) => {
         },
       };
 
-      const res = await axios.post(`${API}/accounts/refresh/`, {
+      const res = await axios.post(`${API}/account/token/refresh/`, {
         refresh: tokens.refresh,
         config,
       });

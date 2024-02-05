@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://34.121.141.26/api/v1";
+const API = "http://34.173.115.25/api/v1";
 
 export const productContext = createContext();
 
@@ -48,7 +48,7 @@ const ProductContextProvider = ({ children }) => {
           Authorization,
         },
       };
-      const res = await axios.get(`${API}/categories/`, config);
+      const res = await axios.get(`${API}/category/list/`, config);
       dispatch({
         type: "GET_CATEGORIES",
         payload: res.data.results,
