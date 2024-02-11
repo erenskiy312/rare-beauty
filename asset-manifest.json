@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/erenskiy312/rare-beauty/static/css/main.2ffbd302.css",
-    "main.js": "/erenskiy312/rare-beauty/static/js/main.d17140b8.js",
-    "index.html": "/erenskiy312/rare-beauty/index.html",
-    "main.2ffbd302.css.map": "/erenskiy312/rare-beauty/static/css/main.2ffbd302.css.map",
-    "main.d17140b8.js.map": "/erenskiy312/rare-beauty/static/js/main.d17140b8.js.map"
+    "main.css": "/rare-beauty/static/css/main.2ffbd302.css",
+    "main.js": "/rare-beauty/static/js/main.d17140b8.js",
+    "index.html": "/rare-beauty/index.html",
+    "main.2ffbd302.css.map": "/rare-beauty/static/css/main.2ffbd302.css.map",
+    "main.d17140b8.js.map": "/rare-beauty/static/js/main.d17140b8.js.map"
   },
   "entrypoints": [
     "static/css/main.2ffbd302.css",
