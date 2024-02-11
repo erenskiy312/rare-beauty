@@ -33,7 +33,7 @@ const Register = () => {
   }
   return (
     <div>
-      <form action="submit" onSubmit={handleSave}>
+      <form className="register-form" action="submit" onSubmit={handleSave}>
         <ul className="register-list">
           <li className="register-item">
             <h1 className="register-title">Create Account</h1>

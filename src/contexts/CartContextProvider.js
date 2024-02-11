@@ -52,7 +52,7 @@ const CartContextProvider = ({ children }) => {
       (elem) => elem.item.id === product.id
     );
 
-    if (productToFind.length == 0) {
+    if (productToFind.length === 0) {
       cart.products.push(newProduct);
     } else {
       cart.products = cart.products.filter(
@@ -89,7 +89,7 @@ const CartContextProvider = ({ children }) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
 
     if (cart) {
-      let newCart = cart.products.filter((elem) => elem.item.id == id);
+      let newCart = cart.products.filter((elem) => elem.item.id === id);
       return newCart.length > 0 ? true : false;
     }
   };
@@ -98,7 +98,7 @@ const CartContextProvider = ({ children }) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
 
     cart.products = cart.products.map((product) => {
-      if (product.item.id == id) {
+      if (product.item.id === id) {
         product.count = count;
         product.subPrice = calcSubPrice(product);
       }
@@ -118,7 +118,7 @@ const CartContextProvider = ({ children }) => {
   const deleteCartProduct = (id) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
 
-    cart.products = cart.products.filter((elem) => elem.item.id != id);
+    cart.products = cart.products.filter((elem) => elem.item.id !== id);
 
     cart.totalPrice = calcTotalPrice(cart.products);
 

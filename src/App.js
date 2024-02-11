@@ -1,22 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-import Home from "./components/pages/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Shop from "./components/Shop/Shop";
-import AboutUs from "./components/pages/AboutUs";
+import AboutUs from "./components/AboutUs/AboutUs";
 import AddProduct from "./components/product/AddProduct";
 import EditProduct from "./components/product/EditProduct";
 import ProductList from "./components/product/ProductList";
 import Cart from "./components/Cart/Cart";
-import Artikul1 from "./components/Artikul1/Artikul1";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/rare-beauty" element={<Home />} />
+        <Route path="/rare-beauty" element={<AboutUs />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/about-us" element={<AboutUs />} />
 

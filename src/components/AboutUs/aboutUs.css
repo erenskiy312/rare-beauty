@@ -17,15 +17,16 @@
   background-color: #fdfbf8;
   margin-left: 9%;
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .flex {
   width: 53%;
 }
 .about__img {
-  width: 35rem;
-  margin: auto;
-  padding: 0px;
+  width: 34rem;
+  margin-left: -5%;
+  margin-top: 2%;
 }
 
 .about__header {
@@ -34,13 +35,21 @@
   margin-left: 3rem;
 }
 
-.about__title {
-  color: black;
+.aboutus__title {
+  font-family: Ogg Regular;
+  font-weight: 400;
+  color: #7F2649;
   font-size: 3rem;
 }
 
 .about__text {
-  color: black;
+  color: #7F2649;
   margin-top: 20px;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+}
+
+.text{
+  font-family: Neue Hass Unica Regular;
+  font-size: 20px;
+  font-weight: 400;
 }

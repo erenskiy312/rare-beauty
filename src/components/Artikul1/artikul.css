@@ -17,27 +17,27 @@
 .container {
   width: 48%;
   display: flex;
-  margin-left: 40%;
+  margin-left: 46%;
   margin-top: -43%;
 }
 
 .section {
-  background-color: #fdfbf8;
   display: flex;
 }
 
 .images__item {
   width: 38rem;
   border-radius: 20rem;
-  margin: 2rem;
 }
 
 .section__header {
-  margin-top: 17rem;
-  margin-left: 3rem;
+  margin-top: 26%;
+  margin-left: 22%;
 }
 
 .section__title {
+  font-family: Ogg Regular;
+  font-weight: 400;
   font-size: 3rem;
 }
 

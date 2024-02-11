@@ -29,7 +29,7 @@ const Login = () => {
 
   return (
     <div>
-      <form action="submit" onSubmit={handleSave}>
+      <form className="login-form" action="submit" onSubmit={handleSave}>
         <ul className="login-list">
           <li className="login-item">
             <h1 className="login-title">Sign in</h1>
@@ -57,13 +57,13 @@ const Login = () => {
       </form>
       <a className="forgot-password">Forgot password?</a>
       <div className="line"></div>
-      <form action="">
-        <h1 className="create-account-title">Create Account</h1>
+      <form className="register-click-form" action="submit">
+        <h1 className="create-account-title">New Account</h1>
         <button
           onClick={() => navigate("/register")}
           className="btn-click-register"
         >
-          Register
+          Create Account
         </button>
       </form>
     </div>

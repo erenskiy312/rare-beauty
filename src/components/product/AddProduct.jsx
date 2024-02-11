@@ -29,7 +29,7 @@ const AddProduct = () => {
   }
   return (
     <div>
-      <form action="submit" onSubmit={handleSave}>
+      <form className="addProduct-form" action="submit" onSubmit={handleSave}>
         <ul className="add-list">
           <li className="add-item">
             <h1 className="add-title">Create Product</h1>

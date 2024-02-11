@@ -1,16 +1,21 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
-* {
+ /* @import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"); */
+/* * {
   background-color: #fdfbf8;
   font-family: "Aldrich", sans-serif;
   font-family: "Fuzzy Bubbles", cursive;
   font-family: "Inter", sans-serif;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Open Sans", sans-serif;
-  font-family: "Raleway", sans-serif; */
+  font-family: "Raleway", sans-serif; 
 
-/* margin: 0;
+  margin: 0;
   padding: 0;
-  box-sizing: border-box; */
+  box-sizing: border-box;
+} */
+
+  .login-form{
+    margin-top: 10%;
+  }
 
 h1 {
   display: inline;
@@ -84,7 +89,7 @@ input {
 }
 
 .register-form {
-  margin: 80px 180px 0px;
+  margin-top: 10%;
 }
 
 .register-title,
@@ -97,6 +102,10 @@ input {
   font-size: 48px;
   margin: 10px 0px 30px;
   line-height: 1.15;
+}
+
+.register-title{
+  margin-left: -7% !important;
 }
 
 li {
@@ -178,8 +187,8 @@ button:hover {
 
 .create-account-title {
   position: absolute;
-  left: 58%;
-  margin-top: -230px;
+  left: 56%;
+  margin-top: -222px;
 }
 
 .btn-click-register {

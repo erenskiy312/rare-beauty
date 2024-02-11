@@ -52,7 +52,7 @@ const Navbar = () => {
         <a onClick={() => navigate("/about-us")}>ABOUT US</a>
       </p>
       <h1>
-        <a className="logo" onClick={() => navigate("/")}>
+        <a className="logo" onClick={() => navigate("/rare-beauty")}>
           Rare Beauty
         </a>
       </h1>
